@@ -13,37 +13,53 @@
     <h1>Calculator</h1>
     <form id="calculator"  name="calculator">
 
-      <input style="width: 90%; margin: 1rem ; height: 3rem;border-radius:2rem ; color: black;" type="text" name="result"  id="result" disabled> 
-        <br>
+      <input style="width: 90%; margin: 1rem ; height: 3rem;border-radius:2rem ; text-align: end; color: wheat;" type="text" name="result"  id="result" disabled > 
+         <br>
       
-            <input type="button" class="butn" value="1" onclick="calculator.result.value += '1'" >
-            <input type="button" class="butn" value="2" onclick="calculator.result.value+='2'">
-            <input type="button" class="butn" value="3" onclick="calculator.result.value+='3'">
-            <input type="button" class="operator" value="+" onclick="calculator.result.value += '+' ">
+            <input type="button" id="1" class="butn" value="1" onclick="calculator.result.value += dis('1')" >
+            <input type="button" class="butn" value="2" onclick="calculator.result.value+=dis('2')">
+            <input type="button" class="butn" value="3" onclick="calculator.result.value+=dis('3')">
+            <input type="button" class="operator" value="+" onclick="calculator.result.value += dis('+') ">
        
         <p>
-            <input type="button"  class="butn" value="4" onclick="calculator.result.value += '4' ">
-            <input type="button"  class="butn" value="5" onclick="calculator.result.value+='5'">
-            <input type="button"  class="butn" value="6" onclick="calculator.result.value+='6'">
-            <input type="button" class="operator" value="-" onclick="calculator.result.value+='-'"></p>
+            <input type="button"  class="butn" value="4" onclick="calculator.result.value += dis('4') ">
+            <input type="button"  class="butn" value="5" onclick="calculator.result.value+=dis('5')">
+            <input type="button"  class="butn" value="6" onclick="calculator.result.value+=dis('6')">
+            <input type="button" class="operator" value="-" onclick="calculator.result.value+=dis('-')"></p>
 
 
         <p>
-            <input type="button"  class="butn" value="7" onclick="calculator.result.value+='7'">
-            <input type="button"  class="butn" value="8" onclick="calculator.result.value+='8'">
-            <input type="button"  class="butn" value="9" onclick="calculator.result.value+='9'">
-            <input type="button" class="operator" value="*" onclick="calculator.result.value+='*'"></p>
+            <input type="button"  class="butn" value="7" onclick="calculator.result.value+=dis('7')">
+            <input type="button"  class="butn" value="8" onclick="calculator.result.value+=dis('8')">
+            <input type="button"  class="butn" value="9" onclick="calculator.result.value+=dis('9')">
+            <input type="button" class="operator" value="*" onclick="calculator.result.value+=dis('*')"></p>
 
 
             <p>
-                <input type="button"  class="butn" value="/" onclick="calculator.result.value+='/'">
-                <input type="button"  class="butn" value="0" onclick="calculator.result.value+='0'">
-                <input type="button"  class="butn" value="%" onclick="calculator.result.value+='%'">
-                <input type="button" class="operator" value= "=" onclick="calculator.result.value= eval(calculator.result.value)"></p>
-                <p><input style="width: 85%; height: 3rem; font-size: large; font-weight: bold; font-family: 'Gill Sans' ; " type="button" value="CLEAR" id="result"></p>
+                <input type="button"  class="butn" value="/" onclick="calculator.result.value+=dis('/')">
+                <input type="button"  class="butn" value="0" onclick="calculator.result.value+=dis('0')">
+                <input type="button"  class="butn" value="%" onclick="calculator.result.value+=dis('%'">
+                <input type="button" class="operator" value= "=" onclick="calculator.result.value= solve(document.getElementsByName(result))"></p>
+                <p><input style="width: 85%; height: 3rem; font-size: large; font-weight: bold; font-family: 'Gill Sans' ;" type="button" value="CLEAR" id="result"></p>
                 
 
+<script>
+    function dis(val){
 
+        document.getElementById("result").value += val;
+    }
+
+
+    function solve(res){
+
+        
+  
+ 
+   
+
+
+    }
+</script>
 
 
 
