@@ -39,7 +39,7 @@
             <input type="button"  class="butn" value="0" onclick="myfunc('0')">
             <input type="button"  class="butn" value="%" onclick="myfunc('%')">
             <input type="button" class="operator" value= "=" onclick="solve()"></p>
-            <p><input style="width: 85%; height: 3rem; font-size: large; font-weight: bold; font-family: 'Gill Sans' ; " type="button" value="CLEAR" id="result"></p>
+            <p><input style="width: 85%; height: 3rem; font-size: large; font-weight: bold; font-family: 'Gill Sans' ; " onclick="reset()"   type="button" value="CLEAR" id="result"></p>
 
 
 
@@ -58,9 +58,12 @@ var sk = document.getElementsByName('result')[0].value;
 
 }
 function solve(){
+var ss = document.getElementsByName("result").innerHTML(eval(document.getElementsByName("result"))) ;
 
 
-
+}
+function reset(){
+    document.getElementsByName('result').value.reload()
 }
 
 
